@@ -1,0 +1,162 @@
+.caja{
+    width: 100%;
+    height: 1000px;
+    background-color: rgb(120, 117, 117);
+    display:flex ;
+    flex-direction: column;
+}
+
+.cabeza{
+    justify-content: center;
+    font-size: 25px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);    
+
+
+}
+
+.footer{
+  background-color: rgb(120, 117, 117);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    width: 100%;
+    height: 100px;
+}
+
+
+.titulo{
+    margin-top: 0px;
+    margin-bottom: 10px;
+    color: #ffffff;
+    letter-spacing: .1em;
+    text-shadow: 
+    0 -1px 0 #fff, 
+    0 1px 0 #2e2e2e, 
+    0 2px 0 #2c2c2c, 
+    0 3px 0 #2a2a2a, 
+    0 4px 0 #282828, 
+    0 5px 0 #262626, 
+    0 6px 0 #242424, 
+    0 7px 0 #222, 
+    0 8px 0 #202020, 
+    0 9px 0 #1e1e1e, 
+    0 10px 0 #1c1c1c, 
+    0 11px 0 #1a1a1a, 
+    0 12px 0 #181818, 
+    0 13px 0 #161616, 
+    0 14px 0 #141414, 
+    0 15px 0 #121212, 
+    0 22px 30px rgba(0, 0, 0, 0.9);
+}
+
+button {
+    margin: 5px;
+    height: 50px;
+    --bg: #373636;
+    --text-color: #fff;
+    position: relative;
+    width: 150px;
+    border: none;
+    background: var(--bg);
+    color: var(--text-color);
+    padding: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.2s;
+    border-radius: 5px;
+    opacity: 0.8;
+    letter-spacing: 1px;
+    box-shadow: rgb(0, 0, 0) 0px 7px 2px, #000 0px 8px 5px;
+}
+
+button:hover {
+    opacity: 1;
+}
+
+button:active {
+    top: 10px;
+    box-shadow: #2a2929 0px 3px 2px,#000 0px 3px 5px;
+}
+
+.padre{
+  background-color: rgb(120, 117, 117);
+  padding-right: 30px;
+    justify-content: center;
+}
+.padre2{
+  background-color: rgb(120, 117, 117);
+  display: flex;
+  justify-content: center;
+}
+.padre3{
+  background-color: rgb(120, 117, 117);
+}
+
+/* this card is inspired form this - https://georgefrancis.dev/ */
+
+.card {
+    --border-radius: 0.75rem;
+    --primary-color: #7257fa;
+    --secondary-color: #3c3852;
+    width: 210px;
+    font-family: "Arial";
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    background: #f1f1f3;
+    box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 3%);
+    position: relative;
+  }
+  
+  .card > * + * {
+    margin-top: 1.1em;
+  }
+  
+  .card .card__content {
+    color: var(--secondary-color);
+    font-size: 0.86rem;
+  }
+  
+  .card .card__title {
+    padding: 0;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+  
+
+  
+  .card .card__arrow {
+    position: absolute;
+    background: black;
+    padding: 0.4rem;
+    border-top-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    bottom: 0;
+    right: 0;
+    transition: 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card svg {
+    transition: 0.2s;
+  }
+  
+  /* hover */
+  .card:hover .card__title {
+    color: black;
+    text-decoration: underline;
+  }
+  
+  .card:hover .card__arrow {
+    background: #111;
+  }
+  
+  .card:hover .card__arrow svg {
+    transform: translateX(3px);
+  }
+

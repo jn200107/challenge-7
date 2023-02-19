@@ -1,24 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import { Box } from '@mui/material'
+import Administracion from './components/administracion/administracion.js'
+import Informacion from './components/informacion-general/informacion-general.js'
+import Portafolio from './components/portafolio/portafolio.js'
+import Restringido from './components/acceso-restringido/acceso-restringido';
+import Usuarios from './components/usuarios/usuarios.js'
+import { ProtectedRoute } from './components/protected-route/protected-route';
+import {BrowserRouter,Route,Routes} from 'react-router-dom'
 
-function App() {
+const App=()=> {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box>
+      <BrowserRouter>
+          <Routes> 
+              <Route path='/administracion' element={<Administracion/>}> </Route> 
+              <Route path='/informacion-general' element={<Informacion/>}> </Route>
+              <Route path='/usuarios' element={<Usuarios/>}> </Route>
+              <Route path='/acceso-restringido' element={<Restringido/>}> </Route>
+
+              <Route element={<ProtectedRoute isAllowed={true}/>}> 
+                <Route path='/portafolio' element={<Portafolio/>}> </Route>
+              </Route>  
+          </Routes>
+      </BrowserRouter>
+    </Box>
   );
 }
 
